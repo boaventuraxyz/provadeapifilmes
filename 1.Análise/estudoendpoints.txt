@@ -1,0 +1,77 @@
+(1)/post           /usuario/login
+request {
+    "email" : '',
+    "senha": ''
+}
+
+response {
+    "id" : 0,
+    "email" : '',
+    "nome": ''
+}
+
+(2) /post   /filme
+request{
+    "usuario": 0,
+    "nome": '',
+    "sinopese": '',
+    "avaliacao": 0.0,
+    "lancamento": '2020-10-10',
+    "disponivel": true,
+    "capa": ''
+}
+response{
+    "id": 1,
+    "nome": '',
+    "sinopese": '',
+    "avaliacao": 0.0,
+    "lancamento": '20-10-10',
+    "disponivel": true,
+    "capa": '',
+    "usuario": 0
+    }
+
+(3)  /put       /filme/:id
+
+request {
+    "usuario": 0,
+    "nome": '',
+    "sinopese": '',
+    "avaliacao": 0.0,
+    "lancamento": '2020-10-10',
+    "disponivel": true,
+    "capa": ''
+}
+response(204)
+--sem conteudo
+
+(4) /delete     /filme/:id
+
+request
+
+(5) /get        /filme
+response[{
+    "usuario": 0,
+    "nome": '',
+    "avaliacao": 0.0,
+    "lancamento": '2020-10-10',
+    "disponivel": true,
+}]
+(6) /get    /filme/busca?nome=aa
+response{
+     "usuario": 0,
+    "nome": '',
+    "avaliacao": 0.0,
+    "lancamento": '2020-10-10',
+    "disponivel": true,
+}
+(7) /get    /filme/:id
+response{
+     "usuario": 0,
+    "nome": '',
+    "sinopese": '',
+    "avaliacao": 0.0,
+    "lancamento": '2020-10-10',
+    "disponivel": true,
+    "capa": ''
+}
