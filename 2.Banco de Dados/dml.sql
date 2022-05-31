@@ -4,7 +4,7 @@ USE catalogoFilmesDB;
 
 -- carga inicial usuário admin
 INSERT INTO tb_usuario (nm_usuario, ds_email, ds_senha)
-     VALUES ('admin', 'juliospinola.l@gmail.com', '1234');
+     VALUES ('admin', 'admin@admin.com.br', '1234');
 
 
 
@@ -12,10 +12,10 @@ INSERT INTO tb_usuario (nm_usuario, ds_email, ds_senha)
 -- CSU01:: efetuar login
 select id_usuario 		id,
        nm_usuario		nome,
-       ds_email			email
+       ds_email		email
   from tb_usuario
- where ds_email 		= ''
-   and ds_senha			= '1234';
+ where ds_email 		= 'admin@admin.com.br'
+   and ds_senha		= '1234';
 
 
 

@@ -1,6 +1,7 @@
-import {connection} from "./connection.js"
+import {con} from "./connection.js"
 
 export async function Login (email, senha){
+
     const comando = `
     select id_usuario 		id,
     nm_usuario		        nome,
@@ -10,6 +11,8 @@ export async function Login (email, senha){
     and ds_senha			= ?
     `
 
-    const [linhas] = await connection.query(comando, [email,senha])
-    return linhas[0]
+    const [linhas] = await con.query(comando, [email,senha])
+    return linhas[0];
+
+    
 }   
